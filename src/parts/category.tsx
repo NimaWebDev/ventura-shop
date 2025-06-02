@@ -1,5 +1,4 @@
 
-import logoTopCategory from '../assets/logo-category/logo-top-category.png'
 import imageCategory1 from '../assets/image-category/image-category1.png'
 import imageCategory2 from '../assets/image-category/image-category2.png'
 import imageCategory3 from '../assets/image-category/image-category3.png'
