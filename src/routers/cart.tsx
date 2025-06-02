@@ -3,6 +3,9 @@ import { RootState } from '../components/store';
 import { removeFromCart, clearCart } from '../components/cartSlice';
 import { supabase } from '../api/supabaseClient'; 
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+import { showSuccessAlert, showErrorAlert } from '../components/swalHelper';
 
 import logoBuy from '../assets/logo-cart/icons8-buy.gif'
 import logoDelete from '../assets/logo-cart/icons8-delete-50.png'
@@ -11,6 +14,7 @@ export const Cart = () => {
   const items = useSelector((state: RootState) => state.cart.items);
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate()
 
   const totalPrice = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
   console.log("Cart items from Redux:", items);
@@ -21,7 +25,7 @@ const handleDeleteFromCart = async (productId: number) => {
   const { data: { user }, error: userError } = await supabase.auth.getUser();
 
   if (userError || !user) {
-    alert('لطفا ابتدا وارد حساب کاربری خود شوید.');
+    showErrorAlert("لطفا اول وارد شوید !")
     setLoading(false);
     return;
   }
@@ -75,9 +79,10 @@ const handleSubmitOrder = async () => {
 
   if (insertError) {
     console.error("خطا در ثبت سفارش:", insertError);
-    alert("مشکلی در ثبت سفارش رخ داد.");
+    showErrorAlert("مشکلی در ثبت سفارش رخ داد :(")
   } else {
-    alert("سفارش با موفقیت ثبت شد!");
+    showSuccessAlert("سفارش شما با موفقیت ثبت شد ")
+    navigate("/pay_cart")
     dispatch(clearCart()); // خالی کردن سبد خرید از Redux
   }
 

@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { supabase } from '../api/supabaseClient'
 
+import { showSuccessAlert } from '../components/swalHelper'
+
 import logoFlashbtn from '../assets/logo-bestProduct/logo-flash.png'
 import logo from '../assets/navbar-logo/logo-nav.png'
 
@@ -33,6 +35,7 @@ export default function Login() {
       if (error) throw error
 
       setSuccessMsg('ورود موفق! خوش آمدید.')
+      showSuccessAlert("ورود موفق ! خوش آمدید")
 
       setTimeout(() => {
         if(email === AdminEmail && password === AdminPassword){
