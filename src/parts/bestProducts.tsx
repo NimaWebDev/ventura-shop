@@ -126,7 +126,7 @@ const { error } = await supabase
         <h1 className='text-[#081035] text-2xl mt-5  md:text-[28px] font-bold'>محصولات پرفروش</h1>
       </nav>
 
-   <div className='w-screen mt-20 px-[70px] max-w-full overflow-hidden'>
+   <div className='w-full mt-20 px-[70px] max-w-full overflow-hidden'>
   <Swiper
     modules={[Navigation, Autoplay]}
     onSwiper={(swiper) => (swiperRef.current = swiper)}
@@ -156,7 +156,7 @@ const { error } = await supabase
   >
     {products.map((bestProduct) => (
       <SwiperSlide key={bestProduct.id}>
-        <div className='w-[300px] h-[372px] bg-white rounded-4xl p-4 mx-auto'>
+        <div className='w-[100%] h-[372px] bg-white rounded-4xl p-4 mx-auto'>
           <img
             src={bestProduct.image}
             alt='image product'
