@@ -31,7 +31,7 @@ export default function Footer() {
                         <img className='w-[29px] h-[28px]' src={logoNav} alt="logo" />
                         <h1 className='font-[Glancyr] font-bold text-3xl pr-5'>VENTURA</h1>
                     </div>
-                    <p className='text-right text-[#081035] font-bold pt-10'>"تجهیزات حرفه‌ای، ماجراجویی‌های فراموش‌نشدنی"</p>
+                    <p className='text-center md:text-right text-[#081035] font-bold pt-10'>"تجهیزات حرفه‌ای، ماجراجویی‌های فراموش‌نشدنی"</p>
                     <div className='flex justify-center items-center gap-5 mt-5'>
                         <img src={logoInsta} alt="logo" className='cursor-pointer'/>
                         <img src={logoTelegram} alt="logo" className='cursor-pointer'/>
