@@ -156,7 +156,7 @@ const { error } = await supabase
   >
     {products.map((bestProduct) => (
       <SwiperSlide key={bestProduct.id}>
-        <div className='w-[100%] h-[372px] bg-white rounded-4xl p-4 mx-auto'>
+        <div className='w-[300px] h-[372px] bg-white rounded-4xl p-4 mx-auto'>
           <img
             src={bestProduct.image}
             alt='image product'
