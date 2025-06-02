@@ -19,7 +19,7 @@ interface User {
 
 export default function PanelAdmin() {
   const [users, setUsers] = useState<User[]>([])
-  const [setError] = useState<string | null>(null)
+  const [, setError] = useState<string | null>(null)
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navigate = useNavigate();
