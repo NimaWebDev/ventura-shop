@@ -126,7 +126,7 @@ const { error } = await supabase
         <h1 className='text-[#081035] text-2xl mt-5  md:text-[28px] font-bold'>محصولات پرفروش</h1>
       </nav>
 
-   <div className='w-full mt-20 px-[70px] max-w-full overflow-hidden'>
+   <div className='w-screen mt-20 px-[70px] max-w-full overflow-hidden'>
   <Swiper
     modules={[Navigation, Autoplay]}
     onSwiper={(swiper) => (swiperRef.current = swiper)}
