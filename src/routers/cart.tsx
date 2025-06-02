@@ -25,7 +25,7 @@ const handleDeleteFromCart = async (productId: number) => {
   const { data: { user }, error: userError } = await supabase.auth.getUser();
 
   if (userError || !user) {
-    showErrorAlert("لطفا اول وارد شوید !")
+    showErrorAlert("خطا !" , "لطفا اول وارد شوید")
     setLoading(false);
     return;
   }
@@ -79,9 +79,9 @@ const handleSubmitOrder = async () => {
 
   if (insertError) {
     console.error("خطا در ثبت سفارش:", insertError);
-    showErrorAlert("مشکلی در ثبت سفارش رخ داد :(")
+    showErrorAlert("خطا !" , "خطایی در ثبت سفارش رخ داد")
   } else {
-    showSuccessAlert("سفارش شما با موفقیت ثبت شد ")
+    showSuccessAlert("موفق!" , "سفارش شما با موفقیت ثبت شد")
     navigate("/pay_cart")
     dispatch(clearCart()); // خالی کردن سبد خرید از Redux
   }

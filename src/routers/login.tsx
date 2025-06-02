@@ -35,7 +35,7 @@ export default function Login() {
       if (error) throw error
 
       setSuccessMsg('ورود موفق! خوش آمدید.')
-      showSuccessAlert("ورود موفق ! خوش آمدید")
+      showSuccessAlert("تبریک" , "ورود موفق ! خوش آمدید")
 
       setTimeout(() => {
         if(email === AdminEmail && password === AdminPassword){
