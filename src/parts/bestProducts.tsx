@@ -40,26 +40,33 @@ export const BestProducts = ()=>{
     const dispatch = useDispatch<AppDispatch>();
     const navigate = useNavigate();
 
-    const handleAddToCart = async (product: BestProductsINT) => {
-    const { data: { user } } = await supabase.auth.getUser()
+const handleAddToCart = async (product: BestProductsINT) => {
+  const { data, error: userError } = await supabase.auth.getUser()
+  const user = data?.user
 
-  if (!user) {
+  if (userError || !user) {
     navigate('/login')
     return
   }
 
   dispatch(addToCart(product))
 
-  const { error } = await supabase
-    .from('cart')
-    .upsert({
+const { error } = await supabase
+  .from('cart')
+  .upsert(
+    {
       user_id: user.id,
       product_id: product.id,
       name: product.name,
       image: product.image,
       price: product.price,
       quantity: 1,
-    }, { onConflict: ['user_id', 'product_id'] })
+    },
+    {
+      onConflict: 'user_id,product_id', // <-- اینجا آرایه نیست، رشته هست
+      ignoreDuplicates: false,
+    }
+  )
 
   if (error) {
     console.error('Supabase insert error:', error)
@@ -67,6 +74,7 @@ export const BestProducts = ()=>{
     navigate('/cart')
   }
 }
+
 
   useEffect(() => {
     const fetchBestProducts = async () => {
