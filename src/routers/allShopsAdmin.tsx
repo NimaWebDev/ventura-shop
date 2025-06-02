@@ -11,7 +11,7 @@ type Order = {
 
 export default function AdminOrders() {
   const [orders, setOrders] = useState<Order[]>([]);
-  const [user, setUser] = useState<any>(null);
+  const [setUser] = useState<any>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

@@ -33,23 +33,29 @@ function Products() {
    
      dispatch(addToCart(product))
    
-     const { error } = await supabase
-       .from('cart')
-       .upsert({
-         user_id: user.id,
-         product_id: product.id,
-         name: product.name,
-         image: product.image,
-         price: product.price,
-         quantity: 1,
-       }, { onConflict: ['user_id', 'product_id'] })
-   
-     if (error) {
-       console.error('Supabase insert error:', error)
-     } else {
-       navigate('/cart')
-     }
-   }
+   const { error } = await supabase
+  .from('cart')
+  .upsert(
+    {
+      user_id: user.id,
+      product_id: product.id,
+      name: product.name,
+      image: product.image,
+      price: product.price,
+      quantity: 1,
+    },
+    {
+      onConflict: 'user_id,product_id', // <-- اینجا آرایه نیست، رشته هست
+      ignoreDuplicates: false,
+    }
+  )
+
+  if (error) {
+    console.error('Supabase insert error:', error)
+  } else {
+    navigate('/cart')
+  }
+}
 
     useEffect(() => {
       const fetchProducts = async () => {
