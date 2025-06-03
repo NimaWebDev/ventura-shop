@@ -122,7 +122,7 @@ const { error } = await supabase
       </header>
 
       <nav className='ml-auto mr-auto md:flex items-center text-center justify-between lg:ml-65 lg:mr-65 pt-20 md:pt-55'>
-        <button onClick={handleProducts} dir='ltr'className='ml-30 md:ml-0 w-[154px] h-[44px] bg-[#6DA975] text-white font-bold rounded-4xl flex items-center gap-1 cursor-pointer mt-10'><img className='pl-5' src={logoFlash} alt='logo' />مشاهده بیشتر </button>
+        <button onClick={handleProducts} dir='ltr'className='ml-auto mr-auto md:ml-30 md:ml-0 w-[154px] h-[44px] bg-[#6DA975] text-white font-bold rounded-4xl flex items-center gap-1 cursor-pointer mt-10'><img className='pl-5' src={logoFlash} alt='logo' />مشاهده بیشتر </button>
         <h1 className='text-[#081035] text-2xl mt-5  md:text-[28px] font-bold'>محصولات پرفروش</h1>
       </nav>
 
