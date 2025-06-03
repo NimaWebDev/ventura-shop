@@ -19,6 +19,7 @@ import AbautUs from "./routers/abautUs";
 import AddProduct from "./routers/addProduct";
 import AddArticle from "./routers/addArticle";
 import Pay from "./routers/pay";
+import Error from "./components/error";
 
 
 function App() {
@@ -56,8 +57,10 @@ function App() {
           <Route path="/add_Product" element={<AddProduct />} />
           <Route path="/add_Article" element={<AddArticle />} />
           <Route path="/pay_cart" element={<Pay />} />
+          <Route path="*" element={<Error />} />
         </Routes>
     )
   }}
 
-export default App
+export default App;
+
