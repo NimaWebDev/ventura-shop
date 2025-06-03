@@ -24,11 +24,11 @@ export default function Brands() {
     }, []);
 
   return (
-    <div className='w-full h-[1080px] sm:h-[600px] md:h-[378px] bg-[#E4F6E7] '>
+    <div className='w-full h-auto sm:h-[600px] md:h-[378px] bg-[#E4F6E7] '>
         <h1 className='text-[#081035] text-center text-[34px] font-bold mb-5 mt-30'>برند ها</h1>
-        <div data-aos="fade-down" className='w-auto sm:w-[500px] lg:w-[1600px] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-center items-center text-center ml-auto mr-auto'>
+        <div data-aos="fade-down" className='w-auto sm:w-[500px] lg:w-[1600px] grid grid-cols-2 lg:grid-cols-4 justify-center items-center text-center ml-auto mr-auto'>
             {brands.map((brand)=>(
-                <div className='w-[284px] h-[90px] mr-auto ml-auto mt-5' key={brand.id}>
+                <div className='w-[180px] lg:w-[284px] h-[90px] mr-auto ml-auto mt-5' key={brand.id}>
                     <img src={brand.image} alt="image brands" className=''/>
                 </div>
             ))}
