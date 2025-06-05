@@ -3,23 +3,9 @@
 
 @font-face {
   font-family: 'MyCustomFont';
-  src: url('/public/woff2/ٍEstedad-Regular.woff2.woff2')
+  src: url('/public/woff2/ٍEstedad-Medium.woff2.woff2')
   format('woff');
   font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'MyCustomFont';
-  src: url('/public/woff2/ٍEstedad-Bold.woff2.woff2')
-  format('woff');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'MyCustomFont';
-  src: url('/public/woff2/ٍEstedad-Black.woff2.woff2')
-  format('woff');
-  font-weight: 900;
   font-style: normal;
 }
 
