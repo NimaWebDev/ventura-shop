@@ -1,6 +1,16 @@
 @import "tailwindcss";
 @import 'aos/dist/aos.css';
 
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('/public/woff2/Estedad-Black.woff2')
+  format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 html, body {
   overflow-x: hidden;
+  font-family: 'MyCustomFont';
 }
