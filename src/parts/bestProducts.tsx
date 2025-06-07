@@ -100,17 +100,17 @@ const { error } = await supabase
   return (
     <div className='mt-30'>
       <header className='relative lg:flex'>
-        <div className='xl:ml-80'>
+        <div className='lg:ml-40 2xl:ml-80'>
           <div>
-            <img src={imageBG} alt='bg image' />
-            <img src={logoTop} alt='logo' className='absolute inset-0 z-10 xl:ml-170' />
+            <img src={imageBG} alt='bg image'/>
+            <img src={logoTop} alt='logo' className='absolute inset-0 z-10 lg:ml-130 2xl:ml-170' />
           </div>
-          <h1 className='absolute inset-0 z-10 text-[35px] sm:text-[52px] text-[#ffffffb0] font-bold mt-40 xl:ml-90'>
+          <h1 className='absolute inset-0 z-10 text-[35px] sm:text-[52px] text-[#ffffffb0] font-bold mt-40 lg:ml-50 2xl:ml-90'>
             JACK WOLFSKIN
           </h1>
-          <img src={imageBag} alt='image bag' className='absolute inset-0 z-10 xl:ml-95 mt-10' />
+          <img src={imageBag} alt='image bag' className='absolute inset-0 z-10 lg:ml-50 2xl:ml-95 mt-10' />
         </div>
-        <div dir='rtl' className='mt-50 justify-center items-center text-center xl:ml-70 xl:mt-10'>
+        <div dir='rtl' className='mt-50 justify-center items-center text-center lg:ml-40 2xl:ml-70 xl:mt-10'>
           <h1 className='text-[35px] text-[#081035] sm:text-[52px] font-bold'>کــوله پشتی های سری </h1>
           <h1 className='text-[35px] text-[#6DA975] sm:text-[52px] font-bold'>JACK WOLFSKIN</h1>
           <p className='w-[350px] text-center sm:mr-10 sm:w-[428px] mr-0 h-[58px] text-wrap text-[#323444]'>
