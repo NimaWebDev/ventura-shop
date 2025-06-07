@@ -9,7 +9,7 @@ import logoX from '../assets/logo-footers/logo-x.png'
 export default function Footer() {
   return (
     <div className='mt-30 relative'>
-        <header dir='rtl' className='hidden md:visible w-[570px] h-[80px] bg-[#6DA975] rounded-4xl md:flex justify-center items-center gap-20 ml-170 absolute mt-2'>
+        <header dir='rtl' className='hidden md:visible w-[570px] h-[80px] bg-[#6DA975] rounded-4xl md:flex justify-center items-center gap-20 lg:ml-105 2xl:ml-170 absolute lg:mt-0 2xl:mt-2'>
             <h1 className='text-[20px] text-white font-bold'>از تخفیفامون باخبر شید!!</h1>
             <div className='w-[263px] h-[48px] bg-white rounded-2xl flex justify-center items-center gap-5'>
                 <input type="text" placeholder='ادرس ایمیل ...' className='w-[263px] h-[48px] bg-white rounded-2xl pr-3'/>
